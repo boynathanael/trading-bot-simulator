@@ -1,0 +1,10 @@
+{
+  "symbol": "BTCUSDT",
+  "timeframe": "5m",
+  "diPlusThreshold": 25,
+  "diMinusThreshold": 20,
+  "adxMinimum": 20,
+  "takeProfit": 2,
+  "stopLoss": 1,
+  "leverage": 10
+}
