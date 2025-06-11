@@ -93,7 +93,7 @@ Menerima sinyal dari pemicu eksternal (disimulasikan dari TradingView).
 
 ---
 
-## Simulasi Webhook TradingView
+## ⚠️ Simulasi Webhook TradingView
 
 Karena fitur webhook di TradingView memerlukan akun premium, fungsionalitas webhook disimulasikan menggunakan **Postman** untuk mendemonstrasikan bahwa backend siap menerima dan memproses sinyal secara real-time.
 
@@ -106,15 +106,12 @@ Karena fitur webhook di TradingView memerlukan akun premium, fungsionalitas webh
    - **URL:** `[URL Ngrok Anda]/webhook` (Contoh: `https://abcd-1234.ngrok.io/webhook`)
    - **Body:** Pilih `raw` dan `JSON`. Tempel payload di bawah ini untuk menyimulasikan sinyal **BUY**:
      ```json
-    {
-        "symbol": "BTCUSDT",
-        "timeframe": "5m",
-        "diPlusThreshold": 25,
-        "diMinusThreshold": 20,
-        "adxMinimum": 20,
-        "takeProfit": 2,
-        "stopLoss": 1,
-        "leverage": 10
-    }
+     {
+       "symbol": "BTCUSDT",
+       "plusDI": 27.5,
+       "minusDI": 15.0,
+       "adx": 25.0,
+       "timeframe": "5m"
+     }
      ```
 5. Klik **"Send"**. Anda akan melihat log proses muncul di terminal backend dan order baru akan otomatis tampil di aplikasi frontend.
