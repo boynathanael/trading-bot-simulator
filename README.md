@@ -103,7 +103,7 @@ Karena fitur webhook di TradingView memerlukan akun premium, fungsionalitas webh
 3. Salin URL `https` yang diberikan oleh Ngrok.
 4. Buka Postman dan buat request baru:
    - **Metode:** `POST`
-   - **URL:** `[URL Ngrok Anda]/webhook` (Contoh: `https://abcd-1234.ngrok.io/webhook`)
+   - **URL:** `[URL Ngrok Anda]/webhook` (Contoh: ` https://40ce-125-166-13-56.ngrok-free.app/webhook`)
    - **Body:** Pilih `raw` dan `JSON`. Tempel payload di bawah ini untuk menyimulasikan sinyal **BUY**:
      ```json
      {
