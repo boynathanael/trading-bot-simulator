@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_URL = 'https://trading-bot-simulator-bgikt3m4u-boy-nathanael-ss-projects.vercel.app'; // URL backend kita
+const API_URL = 'https://trading-bot-simulator.vercel.app';
 
 function App() {
     const [config, setConfig] = useState({
