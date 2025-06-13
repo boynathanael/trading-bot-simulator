@@ -6,7 +6,10 @@ const cors = require('cors');
 const Binance = require('node-binance-api'); // <-- TAMBAHKAN library Binance
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+    origin: 'https://trading-bot-simulator-t2kz.vercel.app/' // <-- GANTI DENGAN URL FRONTEND ANDA
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // --- PERUBAHAN BESAR: Ganti penyimpanan file dengan variabel di memori ---
