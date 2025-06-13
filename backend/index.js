@@ -16,7 +16,7 @@ app.use(express.json());
 let activeConfig = null; // <-- GANTI config.json dengan variabel
 let orderHistory = [];   // <-- GANTI orders.log dengan array
 
-const PORT = process.env.PORT || 3001; // <-- Gunakan port dari environment jika ada
+const PORT = process.env.PORT || 3001;
 
 // --- Inisialisasi Binance API dengan kunci dari file .env ---
 const binance = new Binance().options({ // <-- TAMBAHKAN BLOK INI
@@ -108,10 +108,8 @@ app.get('/orders', (req, res) => {
 });
 
 
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Backend server berjalan di http://localhost:${PORT}`);
-    });
-}
+app.listen(PORT, () => {
+    console.log(`Backend server berjalan di http://localhost:${PORT}`);
+});
 
 module.exports = app;
