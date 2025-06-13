@@ -7,7 +7,7 @@ const Binance = require('node-binance-api'); // <-- TAMBAHKAN library Binance
 
 const app = express();
 const corsOptions = {
-    origin: 'https://trading-bot-simulator-t2kz.vercel.app/' // <-- GANTI DENGAN URL FRONTEND ANDA
+    origin: 'https://trading-bot-simulator-t2kz.vercel.app' // <-- GANTI DENGAN URL FRONTEND ANDA
 };
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -108,8 +108,12 @@ app.get('/orders', (req, res) => {
 });
 
 
-app.listen(PORT, () => {
+// Jalankan server HANYA jika file ini dieksekusi secara langsung (untuk development lokal)
+if (require.main === module) {
+  app.listen(PORT, () => {
     console.log(`Backend server berjalan di http://localhost:${PORT}`);
-});
+  });
+}
 
+// Ekspor app agar Vercel bisa menggunakannya
 module.exports = app;
